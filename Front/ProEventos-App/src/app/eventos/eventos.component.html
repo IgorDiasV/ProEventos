@@ -1,4 +1,37 @@
-<h1>Eventos de components</h1>
-<p *ngFor="let evento of eventos">
-    {{evento.local}}
-</p>
+<h2>Eventos</h2>
+<hr>
+<form action="" class="row g-3 align-items-center mb-2">
+    <div class="col-auto">
+        <input type="text" class="form-control" placeholder="buscar">
+    </div>
+    <div class="col-auto">
+        <button class="btn btn-outline-success">Buscar</button>
+    </div>
+</form>
+
+<table class="table table-striped">
+    <thead class="table-dark">
+        <tr>
+            <th>#</th>
+            <th>Imagem</th>
+            <th>Tema</th>
+            <th>Local</th>
+            <th>Data</th>
+            <th>Qtd Pessoas</th>
+            <th>Lote</th>
+            <th>Opções</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let evento of eventos">
+            <th>{{evento.eventoId}}</th>
+            <th>{{evento.imagemURL}}</th>
+            <th>{{evento.tema}}</th>
+            <th>{{evento.local}}</th>
+            <th>{{evento.dataEvento}}</th>
+            <th>{{evento.qtdPessoas}}</th>
+            <th>{{evento.lote}}</th>
+            <th></th>
+        </tr>
+    </tbody>
+</table>
