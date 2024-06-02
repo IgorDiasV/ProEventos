@@ -8,8 +8,9 @@ import { Component } from '@angular/core';
 })
 export class EventosComponent {
   public eventos: any = [];
-  widthImg: number = 50;
+  widthImg: number = 150;
   marginImg: number = 2;
+  isCollapsed = true;
 
   constructor(private http:HttpClient){
 
