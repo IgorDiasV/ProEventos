@@ -1,14 +1,14 @@
 <h2>Eventos</h2>
 <hr>
-<form action="" class="row g-3 align-items-center mb-2">
+<div action="" class="row g-3 align-items-center mb-2">
     <div class="col-auto">
-        <input type="text" class="form-control" placeholder="buscar">
+        <input type="text" class="form-control" placeholder="buscar" [(ngModel)]="filtroLista">
     </div>
     <div class="col-auto">
         <button class="btn btn-outline-success">Buscar</button>
     </div>
-</form>
-
+</div>
+<h3>Filtro: {{filtroLista}}</h3>
 <table class="table table-striped">
     <thead class="table-dark">
         <tr>

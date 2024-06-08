@@ -10,7 +10,8 @@ export class EventosComponent {
   public eventos: any = [];
   widthImg: number = 150;
   marginImg: number = 2;
-  isCollapsed = true;
+  isCollapsed: boolean = true;
+  filtroLista: string  = '';
 
   constructor(private http:HttpClient){
 
