@@ -28,7 +28,7 @@
         </tr>
     </thead>
     <tbody *ngIf="eventos && eventos.length">
-        <tr *ngFor="let evento of eventos">
+        <tr *ngFor="let evento of eventosFiltrados">
             <th>
                 <div [collapse]="isCollapsed" [isAnimated]="true">
                     <img src="/assets/{{evento.imagemURL}}" [style.width.px]="widthImg" [style.margin.px]="marginImg">
