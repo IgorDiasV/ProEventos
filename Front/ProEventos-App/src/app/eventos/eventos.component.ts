@@ -13,7 +13,7 @@ export class EventosComponent {
   widthImg: number = 150;
   marginImg: number = 2;
   isCollapsed: boolean = true;
-  private _filtroLista: string  = '';
+  public _filtroLista: string = '';
 
   public get filtroLista(){
     return this._filtroLista
@@ -21,12 +21,11 @@ export class EventosComponent {
 
   public set filtroLista(value: string){
     this._filtroLista = value;
-    this.eventosFiltrados = this.filtroLista != '' ? this.filtrarEventos(this.filtroLista) : this.eventos;
+    this.eventosFiltrados = this._filtroLista != '' ? this.filtrarEventos(this.filtroLista) : this.eventos;
   }
 
   filtrarEventos(filtrarPor: string): any {
     filtrarPor = filtrarPor.toLocaleLowerCase();
-
     return this.eventos.filter(
       (evento: {
         local: any; tema: string; 
@@ -39,12 +38,12 @@ export class EventosComponent {
   }
   ngOnInit(): void {
     this.getEventos();
-
-    this.eventosFiltrados = this.eventos;
   }
   public getEventos(): void{
     this.http.get('http://localhost:5116/api/Evento').subscribe(
-      response => this.eventos = response,
+      response => {this.eventos = response;
+                   this.eventosFiltrados = this.eventos }
+      ,
       error => console.log(error)
     );
 
