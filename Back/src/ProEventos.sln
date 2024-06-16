@@ -3,6 +3,14 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProEventos.Application", "ProEventos.Application\ProEventos.Application.csproj", "{88725F25-12C9-4C8E-8CBE-4B2C04EDC0C2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProEventos.Domain", "ProEventos.Domain\ProEventos.Domain.csproj", "{C4B84143-AC3D-47DC-A754-A4F912D136A5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProEventos.API", "ProEventos.API\ProEventos.API.csproj", "{80428B1B-ABA1-40CB-866B-2D204B1C94E0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProEventos.Persistence", "ProEventos.Persistence\ProEventos.Persistence.csproj", "{98DE122C-22AD-490D-832F-376B04AC842F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -10,5 +18,23 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{88725F25-12C9-4C8E-8CBE-4B2C04EDC0C2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{88725F25-12C9-4C8E-8CBE-4B2C04EDC0C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{88725F25-12C9-4C8E-8CBE-4B2C04EDC0C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{88725F25-12C9-4C8E-8CBE-4B2C04EDC0C2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C4B84143-AC3D-47DC-A754-A4F912D136A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C4B84143-AC3D-47DC-A754-A4F912D136A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C4B84143-AC3D-47DC-A754-A4F912D136A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C4B84143-AC3D-47DC-A754-A4F912D136A5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{80428B1B-ABA1-40CB-866B-2D204B1C94E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{80428B1B-ABA1-40CB-866B-2D204B1C94E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{80428B1B-ABA1-40CB-866B-2D204B1C94E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{80428B1B-ABA1-40CB-866B-2D204B1C94E0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{98DE122C-22AD-490D-832F-376B04AC842F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{98DE122C-22AD-490D-832F-376B04AC842F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{98DE122C-22AD-490D-832F-376B04AC842F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{98DE122C-22AD-490D-832F-376B04AC842F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
