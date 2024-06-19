@@ -21,7 +21,7 @@ namespace ProEventos.API.Controllers
         {
             _eventoService = eventoService;
         }
-
+        [HttpGet]
         public async Task<IActionResult> Get()
         {
             try{
