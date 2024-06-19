@@ -15,6 +15,10 @@ namespace ProEventos.Persistence.Contexto
         protected override void OnModelCreating(ModelBuilder modelBuilder){
             modelBuilder.Entity<PalestranteEvento>()
                 .HasKey(PE => new {PE.EventoId, PE.PalestranteId});
+            modelBuilder.Entity<Evento>()
+                .HasMany(e => e.RedesSociais)
+                .WithOne(rs => rs.Evento)
+                .OnDelete(DeleteBehavior.Cascade);
         }
     }
 }
