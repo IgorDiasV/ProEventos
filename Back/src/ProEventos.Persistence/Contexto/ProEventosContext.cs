@@ -11,7 +11,6 @@ namespace ProEventos.Persistence.Contexto
         public DbSet<Palestrante> Palestrantes { get; set; }
         public DbSet<PalestranteEvento> PalestrantesEventos { get; set; }
         public DbSet<RedeSocial> RedesSocials { get; set; }
-
         protected override void OnModelCreating(ModelBuilder modelBuilder){
             modelBuilder.Entity<PalestranteEvento>()
                 .HasKey(PE => new {PE.EventoId, PE.PalestranteId});
@@ -19,6 +18,13 @@ namespace ProEventos.Persistence.Contexto
                 .HasMany(e => e.RedesSociais)
                 .WithOne(rs => rs.Evento)
                 .OnDelete(DeleteBehavior.Cascade);
+
+            modelBuilder.Entity<Palestrante>()
+                    .HasMany(e => e.RedesSociais)
+                    .WithOne(rs => rs.Palestrante)
+                    .OnDelete(DeleteBehavior.Cascade);
+
+
         }
     }
 }
