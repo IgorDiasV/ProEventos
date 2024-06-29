@@ -1,3 +1,5 @@
+import { Lote } from "./Lote";
+
 export interface Evento {
     Id: number;
     Local: string;
