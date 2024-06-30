@@ -1,4 +1,5 @@
 import { Lote } from "./Lote";
+import { Palestrante } from "./Palestrante";
 
 export interface Evento {
     Id: number;
