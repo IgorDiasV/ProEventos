@@ -1,3 +1,5 @@
+import { RedeSocial } from "./RedeSocial";
+
 export interface Palestrante {
     Id: number;  
     Nome: string;  
